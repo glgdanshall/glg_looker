@@ -902,6 +902,11 @@
 - explore: sd_sm_netinterface
 
 - explore: sd_sm_node_avail
+  joins:
+    - join: k_ci_node
+      type: left_outer 
+      sql_on: ${sd_sm_node_avail.dsi_key_id_} = ${k_ci_node.dsi_key_id}
+      relationship: many_to_one
 
 - explore: sd_sm_node_exceptions
 
