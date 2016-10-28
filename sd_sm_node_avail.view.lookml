@@ -82,7 +82,13 @@
   - dimension: total_samples
     type: number
     sql: ${TABLE}.total_samples
-
+  
+  - measure: uptime
+    type: number
+    value_format_name: decimal_2
+    sql: 100.0*${tot_up_time}/1440
+    drill_fields: []
+  
   - measure: count
     type: count
     drill_fields: []
