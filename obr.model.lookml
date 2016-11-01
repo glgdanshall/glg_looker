@@ -909,9 +909,9 @@
 
 - explore: sd_sm_filesystem
   joins:
-    - join: k_ci_node
+    - join: k_sm_file_system
       type: left_outer 
-      sql_on: ${sd_sm_filesystem.dsi_key_id_} = ${k_ci_node.dsi_key_id}
+      sql_on: ${sd_sm_filesystem.dsi_key_id_} = ${k_sm_file_system.dsi_key_id}
       relationship: many_to_one
 
 - explore: sd_sm_netinterface
