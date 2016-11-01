@@ -512,6 +512,11 @@
 - explore: k_sm_cpu_dt_
 
 - explore: k_sm_file_system
+  joins:
+    - join: k_ci
+      type: left_outer 
+      sql_on: ${k_sm_file_system.system_ref} = ${k_ci.dsi_key_id}
+      relationship: many_to_one
 
 - explore: k_sm_file_system_
 
