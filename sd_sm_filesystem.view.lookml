@@ -78,4 +78,9 @@
   - measure: count
     type: count
     drill_fields: []
+    
+  - measure: average_percent
+    type: number
+    value_format_name: decimal_2
+    sql: ${}
 
