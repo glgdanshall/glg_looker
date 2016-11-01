@@ -894,12 +894,32 @@
 - explore: sd_om_service
 
 - explore: sd_sm_cpu
+  joins:
+    - join: k_ci_node
+      type: left_outer 
+      sql_on: ${sd_sm_cpu.dsi_key_id_} = ${k_ci_node.dsi_key_id}
+      relationship: many_to_one
 
 - explore: sd_sm_disk
+  joins:
+    - join: k_ci_node
+      type: left_outer 
+      sql_on: ${sd_sm_disk.dsi_key_id_} = ${k_ci_node.dsi_key_id}
+      relationship: many_to_one
 
 - explore: sd_sm_filesystem
+  joins:
+    - join: k_ci_node
+      type: left_outer 
+      sql_on: ${sd_sm_filesystem.dsi_key_id_} = ${k_ci_node.dsi_key_id}
+      relationship: many_to_one
 
 - explore: sd_sm_netinterface
+  joins:
+    - join: k_ci_node
+      type: left_outer 
+      sql_on: ${sd_sm_netinterface.dsi_key_id_} = ${k_ci_node.dsi_key_id}
+      relationship: many_to_one
 
 - explore: sd_sm_node_avail
   joins:
