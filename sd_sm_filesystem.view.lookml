@@ -4,6 +4,7 @@
 
   - dimension: avg_pct_util
     type: number
+    value_format_name: decimal_2
     sql: ${TABLE}.avgPctUtil
 
   - dimension: avg_space_used_in_mb
