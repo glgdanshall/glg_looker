@@ -121,6 +121,12 @@ view: sd_sm_cpu {
     sql: ${TABLE}.total_samples ;;
   }
 
+  measure:  AverageUtilization {
+    type:  average
+    value_format_name: decimal_2
+    sql:  1*${avg_tot_util} ;;
+  }
+
   measure: count {
     type: count
     drill_fields: []

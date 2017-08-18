@@ -65,7 +65,7 @@ view: k_ci_node {
 
   dimension: display_name {
     type: string
-    sql: ${TABLE}.Display_Name ;;
+    sql: ${TABLE}.Display_Name  ;;
   }
 
   dimension: dns_name {

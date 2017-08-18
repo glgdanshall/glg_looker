@@ -102,7 +102,7 @@ view: sd_sm_node_avail {
   }
 
   measure: uptime {
-    type: number
+    type: average
     value_format_name: decimal_2
     sql: 100.0*${tot_up_time}/1440 ;;
     drill_fields: []

@@ -98,7 +98,7 @@ view: sd_sm_filesystem {
   }
 
   measure: average_percent {
-    type: number
+    type: average
     value_format_name: decimal_2
     sql: 1*${avg_pct_util} ;;
   }
